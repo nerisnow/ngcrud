@@ -11,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {UserService} from './user.service';
 import { HomeComponent } from './home/home.component';
+import { GetUserComponent } from './get-user/get-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 
 
@@ -18,7 +21,10 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     CreateUserComponent,
-    HomeComponent
+    HomeComponent,
+    GetUserComponent,
+    UpdateUserComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,

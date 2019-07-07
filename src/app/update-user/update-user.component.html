@@ -1,0 +1,27 @@
+
+  
+  
+  <br><br>
+  
+      <input type="number" class="form-control" [(ngModel)] = 'idtoUpdate' placeholder="Enter User ID to update" />
+      <button class="btn btn-info" (click)= 'updateUser()'>Update User</button>
+  
+      <!-- <div *ngIf="displayData">
+        <table class ="table">
+            <tr >
+              <td>
+                {{user.id}}
+              </td>
+              <td>
+                {{user.name}}
+              </td>
+              <td>
+                {{user.model}}
+              </td>
+            </tr>
+          </table> -->
+  
+  <br><br>
+      <button class="btn btn-danger" [routerLink]="['/home']" routerLinkActive="router-link-active" > Go Back</button>
+  <router-outlet></router-outlet>
+  

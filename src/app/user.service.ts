@@ -32,5 +32,27 @@ export class UserService {
       tap(data => console.log(data)),
       catchError(this.handleError)
     );
-}
+  }
+
+  getUser (id:number):Observable<User> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<User>(url).pipe(
+      catchError(this.handleError)
+      );
+  }
+
+  updateUser(user: User): Observable<any>{
+    const url = `${this.apiUrl}/${user.id}`;
+    return this.http.put<User>(this.apiUrl, user, this.httpOptions).pipe(
+      map(() => user),
+      catchError(this.handleError)
+    );
+  }
+
+  deleteUser(id: number): Observable<User> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete<User>(url,this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
 }
